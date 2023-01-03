@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "c8c12faa-5e64-41ab-92ab-790ef4956474",
+		"name": "Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12950107"
+	},
+	"item": [
+		{
+			"name": "getAllTaskById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "createNewTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserID\": 1,\r\n    \"Title\": \"Insert a task to the db\",\r\n    \"TaskDescription\": \"Update a record from a post method via the API Endpoint to db.\",\r\n    \"isCompleted\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/task/createNewTask",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"createNewTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTasktTitle",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TaskID\": 3,\r\n    \"Title\":\"Take a record from post method in the API Endpoint and insert into the db.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/task/updateTasktTitle",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"updateTasktTitle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTaskDescription",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TaskID\": 3,\r\n    \"Title\":\"Take a record from post method in the API Endpoint and insert into the db.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/task/updateTaskDescription",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"updateTaskDescription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateisCompleted",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TaskID\": 3,\r\n    \"isCompleted\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/task/updateisCompleted",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"updateisCompleted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTaskById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/task/deleteTaskById/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"deleteTaskById",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
