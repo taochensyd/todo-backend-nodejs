@@ -116,5 +116,18 @@ router.patch('/updateisCompleted', (req, res) => {
     }
 })
 
+router.delete('/deleteTaskById/:id', (req, res) => {
+    let sql = `DELETE FROM TodoTask WHERE TaskId=${req.params.id};`
+    try {
+        db.query(sql, (err, rows) => {
+            console.log(sql);
+            console.log(rows);
+            res.send(rows);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 
 module.exports = router;
